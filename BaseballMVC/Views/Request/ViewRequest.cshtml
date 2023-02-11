@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Request>
+
+<h2>Employee Ticket Request</h2>
+<table class="table">
+    <tr>
+        <th>RequestID</th>
+        <th>EmployeeID</th>
+        <th>Tickets</th>
+        <th>DateOfRequest</th>
+        <th>GameDate</th>
+        <th>EntryTime</th>
+        <th>ApprovedStatus</th>
+
+    </tr>
+
+    @foreach (var request in @Model)
+    {
+            <tr>
+                <td>@request.requestID</td>
+                <td>@request.employeeID</td>
+                <td>@request.numOfTickets</td>
+                <td>@request.dateRequested</td>
+                <td>@request.gameDate</td>
+                <td>@request.entryTime</td>
+                <td>@request.isApproved</td>
+            </tr>
+    }
+
+</table>

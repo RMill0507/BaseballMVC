@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Employee>
+
+<h2 style="color: blue">Employees</h2>
+<table class="table table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>isAdmin</th>
+        
+        
+    </tr>
+
+    @foreach (var employee in @Model)
+    {
+        <tr>
+            <td><a href=/Request/ViewRequest/@employee.employeeID>@employee.employeeID</a></td>
+            <td>@employee.name</td>
+            <td>@employee.email</td>
+            <td>@employee.department</td>
+            <td>@employee.isAdmin</td>
+            
+            
+        </tr>
+    }
+
+</table>
